@@ -15,7 +15,7 @@ public class file {
 		RestAssured.baseURI="https://petstore.swagger.io/v2/";
 		
 		given()
-		.get("user/Manikanta")
+		.get("user/Mani")
         .then()
 		.statusCode(200).log().all();	
 	}
@@ -53,7 +53,7 @@ public class file {
         };        
         return postData;
     }
-	@Test(enabled=true,dataProvider="putData",dependsOnMethods={"postManikanta"})
+	@Test(enabled=true,dataProvider="putData",dependsOnMethods={"postMani"})
 	public void putManikanta(String data)
 	{
 		RestAssured.baseURI="https://petstore.swagger.io/v2/";
@@ -63,7 +63,7 @@ public class file {
 		.contentType(ContentType.JSON)
         .body(data)
 		.when()
-		.put("user/Manim")
+		.put("user/Mani")
 		.then()
 		.statusCode(200).log().all();
 		
@@ -77,7 +77,7 @@ public class file {
         j1.put("firstName", "Mani");
         j1.put("lastName","kanta");
         j1.put("email", "Mani@gmail.com");
-        j1.put("password", "1234mani");
+        j1.put("password", "12345mani");
         j1.put("phone","9876543210");
         j1.put("userStatus","1");
         
@@ -86,8 +86,8 @@ public class file {
         };        
         return putData;
 	}  
-	@Test(enabled=true,dataProvider="deleteData",dependsOnMethods={"putMani"})
-	public void deleteMani(String data)
+	@Test(enabled=true,dataProvider="deleteData",dependsOnMethods={"putManikanta"})
+	public void deleteManikanta(String data)
 	{
 		RestAssured.baseURI="https://petstore.swagger.io/v2/";
 		
@@ -100,7 +100,7 @@ public class file {
 	}
 	@DataProvider(name="deleteData")
     public Object[][] providerDELETE(){
-        Object[][] deleteData = {{"Manim"}};
+        Object[][] deleteData = {{"Mani"}};
         return deleteData;
     }
 	@Test(enabled=true,dataProvider="loginData",dependsOnMethods={"postMani"})

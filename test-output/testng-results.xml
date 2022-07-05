@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-05T11:17:15Z" name="Default suite" finished-at="2022-07-05T11:17:22Z" duration-ms="7308">
+    <groups>
+    </groups>
+    <test started-at="2022-07-05T11:17:15Z" name="Default test" finished-at="2022-07-05T11:17:22Z" duration-ms="7308">
+      <class name="project2.file">
+        <test-method signature="postMani(java.lang.String)[pri:0, instance:project2.file@6853425f]" started-at="2022-07-05T11:17:15Z" name="postMani" data-provider="postData" finished-at="2022-07-05T11:17:17Z" duration-ms="2286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"firstName":"kanta","lastName":"mani","password":"1234mani","userStatus":"1","phone":"0123456789","email":"Mani@gmail.com","username":"Mani"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postMani -->
+        <test-method signature="loginMani(java.lang.String, java.lang.String)[pri:0, instance:project2.file@6853425f]" started-at="2022-07-05T11:17:17Z" name="loginMani" data-provider="loginData" finished-at="2022-07-05T11:17:18Z" depends-on-methods="project2.file.postMani" duration-ms="1270" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Manim]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234mani]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginMani -->
+        <test-method signature="putManikanta(java.lang.String)[pri:0, instance:project2.file@6853425f]" started-at="2022-07-05T11:17:18Z" name="putManikanta" data-provider="putData" finished-at="2022-07-05T11:17:19Z" depends-on-methods="project2.file.postMani" duration-ms="1214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"firstName":"Mani","lastName":"kanta","password":"12345mani","userStatus":"1","phone":"9876543210","email":"Mani@gmail.com","username":"Mani"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putManikanta -->
+        <test-method signature="deleteManikanta(java.lang.String)[pri:0, instance:project2.file@6853425f]" started-at="2022-07-05T11:17:19Z" name="deleteManikanta" data-provider="deleteData" finished-at="2022-07-05T11:17:21Z" depends-on-methods="project2.file.putManikanta" duration-ms="1263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mani]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteManikanta -->
+        <test-method signature="getManikanta()[pri:0, instance:project2.file@6853425f]" started-at="2022-07-05T11:17:21Z" name="getManikanta" finished-at="2022-07-05T11:17:22Z" depends-on-methods="project2.file.putManikanta" duration-ms="1247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getManikanta -->
+      </class> <!-- project2.file -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
